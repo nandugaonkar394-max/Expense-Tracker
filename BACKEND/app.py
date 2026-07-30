@@ -6,7 +6,11 @@ from config import Config
 from datetime import datetime
 
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="templates",
+    static_folder="static"
+)
 
 app.config.from_object(Config)
 
