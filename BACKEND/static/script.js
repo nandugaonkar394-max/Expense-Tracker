@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/api/expenses";
+const API_URL = "/api/expenses";
 
 const user_id = localStorage.getItem("user_id");
 
@@ -384,7 +384,7 @@ function logout(){
     localStorage.removeItem("user_id");
 
 
-    window.location="auth.html";
+    window.location = "/";
 
 
 }

@@ -132,7 +132,7 @@ function login(){
             );
 
 
-            window.location.href="index.html";
+            window.location.href = "/dashboard";
 
 
         }
