@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Expense Tracker</h1>
+
+    <div class="auth-box">
+
+        <h2>Register</h2>
+
+        <input id="name" type="text" placeholder="Name">
+
+        <input id="regEmail" type="email" placeholder="Email">
+
+        <input id="regPassword" type="password" placeholder="Password">
+
+        <button class="register-btn" onclick="register()">
+            Create Account
+        </button>
+
+    </div>
+
+    <hr>
+
+    <div class="auth-box">
+
+        <h2>Login</h2>
+
+        <input id="loginEmail" type="email" placeholder="Email">
+
+        <input id="loginPassword" type="password" placeholder="Password">
+
+        <button class="login-btn" onclick="login()">
+            Login
+        </button>
+
+        <p class="switch-link">
+            New user?
+            <button class="secondary-btn" onclick="showRegister()">
+                Register
+            </button>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
