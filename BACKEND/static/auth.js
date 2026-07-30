@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:5000";
+const API = "";
 
 
 // Show Login
@@ -92,7 +92,7 @@ function login(){
     let password = document.getElementById("loginPassword").value;
 
 
-    fetch("http://127.0.0.1:5000/login", {
+    fetch(API + "/login", {
 
         method:"POST",
 

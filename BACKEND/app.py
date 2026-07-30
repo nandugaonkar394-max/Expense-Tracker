@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
@@ -95,9 +95,7 @@ class User(db.Model):
 
 @app.route("/")
 def home():
-
-    return "Expense Tracker Backend Running"
-
+    return render_template("auth.html")
 
 
 # Get Expenses

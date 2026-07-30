@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Flask, request, jsonify, render_template, Blueprint
 from models import db, User
 
 api = Blueprint("api", __name__)
