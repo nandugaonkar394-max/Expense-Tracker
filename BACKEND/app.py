@@ -4,6 +4,7 @@ from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from config import Config
 from datetime import datetime
+from models import db
 
 
 app = Flask(
@@ -16,7 +17,7 @@ app.config.from_object(Config)
 
 bcrypt = Bcrypt(app)
 
-db = SQLAlchemy(app)
+db.init_app(app)
 
 CORS(app)
 
