@@ -4,7 +4,7 @@ from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from config import Config
 from datetime import datetime
-from models import db
+from models import db, User, Expense
 
 
 app = Flask(
@@ -20,81 +20,8 @@ bcrypt = Bcrypt(app)
 db.init_app(app)
 
 CORS(app)
-
-
-
-# Expense Table Model
-
-class Expense(db.Model):
-
-    __tablename__ = "expenses"
-
-    id = db.Column(
-        db.Integer,
-        primary_key=True
-    )
-
-    user_id = db.Column(
-        db.Integer,
-        nullable=True
-    )
-
-    title = db.Column(
-        db.String(100),
-        nullable=False
-    )
-
-    category = db.Column(
-        db.String(50),
-        nullable=False
-    )
-
-    amount = db.Column(
-        db.Float,
-        nullable=False
-    )
-
-    expense_date = db.Column(
-        db.Date,
-        nullable=False
-    )
-
-    description = db.Column(
-        db.String(255),
-        nullable=True
-    )
-
-    created_at = db.Column(
-        db.DateTime,
-        server_default=db.func.now()
-    )
     
     
-
-class User(db.Model):
-
-    __tablename__ = "users"
-
-    id = db.Column(
-        db.Integer,
-        primary_key=True
-    )
-
-    name = db.Column(
-        db.String(100),
-        nullable=False
-    )
-
-    email = db.Column(
-        db.String(100),
-        unique=True,
-        nullable=False
-    )
-
-    password = db.Column(
-        db.String(255),
-        nullable=False
-    )
 
 # Home
 
