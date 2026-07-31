@@ -5,9 +5,11 @@ load_dotenv()
 
 class Config:
     SQLALCHEMY_DATABASE_URI = (
-        os.getenv("DATABASE_URL") or
-        f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@"
-        f"{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+        f"postgresql://{os.getenv('DB_USER')}:"
+        f"{os.getenv('DB_PASSWORD')}@"
+        f"{os.getenv('DB_HOST')}:"
+        f"{os.getenv('DB_PORT')}/"
+        f"{os.getenv('DB_NAME')}"
     )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
